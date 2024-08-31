@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="70dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/blue1"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/fIV"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/face_mask"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fTV"
+                    android:layout_toEndOf="@id/fIV"
+                    android:text="@string/stay_home"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="19sp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.02"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/fIV"
+                    android:layout_below="@id/fTV"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="12dp"
+                    android:text="Stay physically fit. Exercise regularly. Eat a nutritious diet. Don't smooke."
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_medium"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/categoriesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/c_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.04"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/am_categories"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categoriesText"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/acrepair_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_background2"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/basic_ambulance" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.04"
+                            android:onClick="onServiceClick"
+                            android:padding="4dp"
+                            android:text="Basic"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/carpenter_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_background2"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/cardiac_ambulance" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onServiceClick"
+                            android:padding="4dp"
+                            android:text="Cardiac"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/ceiling_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/card_background2"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/mortuary_ambulance" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.04"
+                            android:onClick="onServiceClick"
+                            android:padding="4dp"
+                            android:text="Mortuary"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/other_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/card_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/siren_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.04"
+                            android:onClick="onServiceClick"
+                            android:padding="4dp"
+                            android:text="Other"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/doccategoriesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/doc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.04"
+                    android:paddingStart="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/what_do_you_need"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doccategoriesText"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/aacrepair_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:layout_gravity="center"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/cardio" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.04"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Cardiologist"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/ccarpenter_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/audio" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Audiologist"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/cceiling_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/dentist" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.04"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Dentist"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/cleaning_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="ENT"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/electrician_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/gyno" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Ob/gyn"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/flooring_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ortho" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Orthopaedic"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/gardener_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/peadia" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Paediatrician"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/general_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/psychiatrist" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Psychiatrists"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/gutter_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/veterian" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.04"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Veterinarian"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/interior_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/radio" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.03"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Radiologist"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/maid_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/pulmonologist" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.01"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Pulmonologist"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/painter_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/endocrinologist" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Endocrinology"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/plumber_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/oncologist" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.01"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Oncologist"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/pest_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/neuron" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.01"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Neurologist"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="3dp"
+                    app:cardCornerRadius="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/water_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/card_background"
+                        android:orientation="vertical"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/others" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.04"
+                            android:onClick="onDoctorClick"
+                            android:padding="4dp"
+                            android:text="Others"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Also you can check"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_bold"
+            android:letterSpacing="0.02"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:includeFontPadding="false"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/findNearByHospitals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/map_local"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_background">
+
+                    <TextView
+                        android:id="@+id/nr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.03"
+                        android:text="Find nearby hospitals"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/hospital"
+                        app:tint="@color/white"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/testLab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lab_test"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_black2"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:id="@+id/tl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.03"
+                        android:layout_marginStart="16dp"
+                        android:text="Book your lab test"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/lab"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/medi_consult_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/medical_back"
+                    android:scaleType="centerCrop"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue4_overlay"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.03"
+                        android:layout_gravity="center"
+                        android:text="@string/medi_consult"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/medi_consult_logo" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:orientation="horizontal"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center">-->
+
+        <!--                -->
+        <!--                -->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </RelativeLayout>-->
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:orientation="horizontal"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center">-->
+
+        <!--                -->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </RelativeLayout>-->
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:orientation="horizontal"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center">-->
+
+
+        <!--                <LinearLayout-->
+        <!--                    android:id="@+id/other_button"-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:orientation="vertical"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:paddingTop="16dp"-->
+        <!--                    android:paddingBottom="16dp"-->
+        <!--                    android:layout_marginEnd="16dp"-->
+        <!--                    android:background="@drawable/card_background">-->
+
+        <!--                    <ImageView-->
+        <!--                        android:layout_width="84dp"-->
+        <!--                        android:layout_height="84dp"-->
+        <!--                        android:src="@drawable/water_puri"/>-->
+
+        <!--                    <TextView-->
+        <!--                        android:onClick="onServiceClick"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="Others"-->
+        <!--                        android:padding="4dp"-->
+        <!--                        android:textSize="15sp"-->
+        <!--                        android:textColor="@android:color/black"-->
+        <!--                        android:fontFamily="@font/poppins_medium"-->
+        <!--                        android:letterSpacing="0.04"-->
+        <!--                        android:layout_gravity="center"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:layout_marginTop="8dp"-->
+        <!--                        android:includeFontPadding="false"/>-->
+
+        <!--                </LinearLayout>-->
+
+
+        <!--            </LinearLayout>-->
+
+        <!--        </RelativeLayout>-->
+
+        <!--       -->
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Gardener"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="General Maintenance"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Gutter Maintenance"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Interior Designing"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Maid Service"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Painter"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Plumber"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Pest Control"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="70dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:background="@drawable/createnew"-->
+        <!--            android:drawableEnd="@drawable/ic_chevron_right_black_16dp"-->
+        <!--            android:gravity="start|center_vertical"-->
+        <!--            android:paddingStart="15dp"-->
+        <!--            android:stateListAnimator="@null"-->
+        <!--            android:text="Water Purification"-->
+        <!--            android:textAlignment="gravity"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textSize="20dp"-->
+        <!--            tools:ignore="HardcodedText,RtlSymmetry,SpUsage,UnusedAttribute" />-->
+
+    </LinearLayout>
+
+</ScrollView>
